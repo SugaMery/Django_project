@@ -1,0 +1,30 @@
+<div id="id02" class="modal1" >
+  
+    <form class="modal-content animate" action="/login/" method="POST">
+      {% csrf_token %}
+      <div class="imgcontainer">
+      <h2> Connexion </h2>
+      </div>
+  
+      <div class="container">
+        <label for="username"><b>Adresse Email</b></label>
+        <input type="text" placeholder="adresse email" name="username" required>
+  
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="passaword" name="password" required>
+          
+        <button type="submit" style="color:white;background-color:darkorange;"  href={% url 'login' %}>Connecter</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+  				{% for message in messages %}
+					<p id="messages">{{message}}</p>
+				{% endfor %}
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+        <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+    </form>
+  </div>
+  

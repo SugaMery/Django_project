@@ -1,0 +1,51 @@
+{% extends 'departements/git/git.html' %}
+
+{% block content %}
+<div class="container-xl">
+	<div class="table-responsive">
+		<div class="table-wrapper">
+			<div class="table-title">
+				<div class="row">
+					<div class="col-sm-6">
+						<h2>Liste <b>des Matieres</b></h2>
+					</div>
+
+				</div>
+			</div>
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>
+
+						</th>
+						
+						
+						<th>Nom Matiere</th>
+						<th>Coef Matiere</th>
+						<th>Quota Horaire</th>
+						<th>Description </th>
+	
+					</tr>
+
+				</thead>
+				<tbody>
+                {% for item in items %}
+					<tr>
+							<td></td>
+                            <td>{{ item.nom_matiere}}</td>
+                            <td>{{ item.coef_matiere}}</td>
+                            <td>{{item.quota_horaire }}</td>
+							<td>{{ item.description_matiere }}</td>   
+         
+					</tr>
+				{% endfor %}
+					
+	
+
+				</tbody>
+			</table>
+
+		</div>
+	</div>        
+</div>
+{% endblock %}

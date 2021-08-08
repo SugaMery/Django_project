@@ -1,0 +1,447 @@
+.map-container-5{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  }
+  .map-container-5 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  }
+  
+  #flot li a {
+        
+        text-decoration: none; 
+        color: white;
+      }
+      #flot ul {
+        margin-top: 10px;
+      } 
+    
+      #sco section a {
+        border-radius: 150px;
+      }
+      .dropdown-menu a { 
+        color: white;
+      
+      }
+   
+      .cover {
+    background: url('/static/images/ept_background.png') no-repeat fixed;
+    background-size:cover;
+    height: 488px;
+    padding: 100px 0 0 0;
+  }
+  
+  
+      .footer-bs {
+      background-color:darkorange;
+    padding: 5px 20px;
+    color: rgba(255,255,255,1.00);
+  
+    border-bottom-right-radius: 6px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 6px;
+  }
+  .footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
+  .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+  .footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+  .footer-bs .footer-brand p { font-size:20px; color:white; }
+  
+  .footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
+  .footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+  .footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold;  }
+  .footer-bs .footer-nav ul.pages a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+  .footer-bs .footer-nav h4 {
+    font-size: 25px;
+  
+    letter-spacing: 3px;
+    margin-bottom:5px;
+  }
+  
+  .footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
+  .footer-bs .footer-nav ul.list li { padding:5px 0px;}
+  .footer-bs .footer-nav ul.list a { color:white; font-size: 18px; }
+  .footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+  
+  ul.list { list-style:none; padding:0px; margin-left: 1%; margin-top: 1%; }
+  ul.list li { padding:5px 0px;}
+  ul.list a { color:black; font-size: 18px; }
+  ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+  
+  p{
+    color:black; 
+    font-size: 20px;
+    margin-left: 1%; 
+    margin-top: 1%; 
+  }
+  .footer-bs .footer-social ul { list-style:none; padding:0px; }
+  .footer-bs .footer-social h4 {
+    font-size: 25px;
+  
+    letter-spacing: 3px;
+  }
+  
+  .footer-bs .footer-ns h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom:10px;
+  }
+  .footer-bs .footer-ns p { font-size:20px; color:rgba(255,255,255,0.70); }
+  
+  @media (min-width: 768px) {
+    .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left: solid 2px white; }
+    .cover #p{
+  font-size: x-large;
+     } 
+  }
+  @media (max-width: 767px) {
+    .footer-bs .footer-brand, .footer-bs .footer-nav { border-bottom: solid 2px white; }
+    .cover #p{
+  font-size: medium;
+     } 
+  }
+  z
+  
+  
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+  }
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  
+  
+  
+   .modal .row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  
+  .modal .col-20 {
+    -ms-flex: 20%; /* IE10 */
+    flex: 20%;
+  }
+  
+  .modal .col-40 {
+    -ms-flex: 40%; /* IE10 */
+    flex: 40%;
+  }
+  .modal .col-60 {
+    -ms-flex: 60%; /* IE10 */
+    flex: 60%;
+  }
+  
+  .modal .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 100%;
+    width:50%;
+    float:center;
+    margin-left:25%;
+  }
+  
+  .modal .col-20,
+  .modal .col-40,
+  .modal .col-75 ,.modal .col-60{
+    padding: 0 16px;
+  }
+  
+  .modal .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+  
+  .modal input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .modal input[type=date] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  .modal img {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  .modal select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+   
+  }
+  .modal select option.sel{
+  color:gray;
+  }
+  .modal #city option{
+    width: 100%;
+    font-size:15px;
+    padding: 20px;
+    border: 1px solid black;
+  
+    color:black;
+  }
+  .modal label {
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .modal .icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+  }
+  
+  .modal .btn {
+    background-color:darkorange ;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+  }
+  
+  .modal .btn:hover {
+    background-color: gray;
+  }
+  
+  .modal a {
+    color: #2196F3;
+  }
+  
+  .modal hr {
+    border: 1px solid lightgrey;
+  }
+  
+  .modal span.price {
+    float: right;
+    color: grey;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+  @media (max-width: 500px) {
+  .modal .col-75 {
+    -ms-flex: 75%; /* IE10 */
+    flex: 100%;
+    width:80%;
+    float:center;
+    margin-left:10%;
+  }
+  }
+  
+  .modal1 .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  /* Center the image and position the close button */
+  .modal1 .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  
+  
+  .modal1 .container {
+    padding: 16px;
+  }
+  
+  .modal1 span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal1 .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button (x) */
+  .modal1 .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .modal1 .close:hover,
+  .modal1 .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .modal1 span.psw {
+       display: block;
+       float: none;
+    }
+    .modal1 .cancelbtn {
+       width: 100%;
+    }
+  }
+  .modal1 input[type=text],.modal1 input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }

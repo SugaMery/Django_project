@@ -1,0 +1,84 @@
+<div id="id01" class="modal">
+
+    <div class="col-75">
+    
+      <div class="container">
+        
+    <h3>Créer un compte utilisateur</h3>
+         <form action="/register/" method="POST">
+   {% csrf_token %}
+                       
+                        
+          <div class="row">
+       
+            <div class="col-60">
+              
+              <label for="fname"><i class="fa fa-user"></i> Prénom et Nom</label>
+              <input type="text" id="fname" name="nom" placeholder="Nom">
+              <input type="text" id="fname" name="prenom" placeholder="Prenom">
+
+        
+              <label for="email"><i class="fa fa-envelope"></i> Adresse Email</label>
+              <input type="text" id="email" name="email" placeholder="etudiant@ept.sn">
+            
+  
+       <div class="row">
+   <div class="col-40">
+               <label for="dept"><i class="fa fa-building-o"></i>       Departements</label>
+        <select  id="dept" name="departement">
+          <option value='Génie électromécanique'>Génie électromécanique</option>
+          <option value='Génie civil'>Génie civil</option>
+          <option value='Génie informatique et telecoms'>Génie informatique et telecoms</option>
+          <option value='Tronc Commun'>Tronc Commun</option>
+        </select>
+  
+   </div>
+    <div class="col-20">
+             <label for="class"><i class="fa fa-level-up" aria-hidden="true"></i>       Niveau</label>
+        <select id="class" name="classe">
+          <option value="TC1">T.C 1</option>
+          <option value="TC2">T.C 2</option>
+          <option value="DIC1">D.I.C 1</option>
+          <option value="DIC2">D.I.C 2</option>
+          <option value="DIC3">D.I.C 3</option>
+        </select>
+  
+   </div>
+   </div>
+            </div>
+  
+  
+            <div class="col-40">
+             
+  
+              <label for="fname"><i class="fa fa-calendar"></i>	Date</label>
+              <input type="date" name="date" id="fname" value="2000-01-01">
+              <input type="text" name="lieu" placeholder="lieu de naissance">
+
+              
+              <label for="fname"><i class="fa fa-key" ></i>	Captcha </label>
+              <img class="" src="/static/images/catcha.png">
+              
+              <input type="text"  placeholder="Entrer le code" name="code">
+  
+         
+            </div>
+            
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr">*j'ai lu et j'accepte la politique de confidentialité et les <a href="#">conditions génerales d'utilisation</a>
+          </label>
+		  <div class="row">
+
+            <div class="col-60">
+         <input type="submit" value="Valider" class="btn" >
+         </div>
+         <div class="col-40">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="width:100%">Cancel</button>
+
+         </div>
+         </div>        </form>
+      </div>
+    </div>
+   </form>
+  </div>

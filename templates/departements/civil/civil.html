@@ -1,0 +1,680 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>EPT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+     <style>
+.map-container-5{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container-5 iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+
+#flot li a {
+      
+      text-decoration: none; 
+      color: white;
+    }
+    #flot ul {
+      margin-top: 10px;
+    } 
+  
+    #sco section a {
+      border-radius: 150px;
+    }
+    .dropdown-menu a { 
+      color: white;
+    
+    }
+ 
+    .cover {
+	background: url('/static/images/ept_background.png') no-repeat fixed;
+  background-size:cover;
+  height: 488px;
+  padding: 100px 0 0 0;
+}
+
+
+    .footer-bs {
+    background-color:darkorange;
+	padding: 5px 20px;
+	color: rgba(255,255,255,1.00);
+
+	border-bottom-right-radius: 6px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 6px;
+}
+.footer-bs .footer-brand, .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+.footer-bs .footer-brand p { font-size:20px; color:white; }
+
+.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+.footer-bs .footer-nav ul.pages a { color:rgba(255,255,255,1.00); font-weight:bold;  }
+.footer-bs .footer-nav ul.pages a:hover { color:rgba(255,255,255,0.80); text-decoration:none; }
+.footer-bs .footer-nav h4 {
+	font-size: 25px;
+
+	letter-spacing: 3px;
+	margin-bottom:5px;
+}
+
+.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.list li { padding:5px 0px;}
+.footer-bs .footer-nav ul.list a { color:white; font-size: 18px; }
+.footer-bs .footer-nav ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+
+ul.list { list-style:none; padding:0px; margin-left: 1%; margin-top: 1%; }
+ul.list li { padding:5px 0px;}
+ul.list a { color:black; font-size: 18px; }
+ul.list a:hover { color:rgba(255,255,255,0.60); text-decoration:none; }
+
+p{
+  color:black; 
+  font-size: 20px;
+  margin-left: 1%; 
+  margin-top: 1%; 
+}
+.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-social h4 {
+	font-size: 25px;
+
+	letter-spacing: 3px;
+}
+
+.footer-bs .footer-ns h4 {
+	font-size: 20px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-bottom:10px;
+}
+.footer-bs .footer-ns p { font-size:20px; color:rgba(255,255,255,0.70); }
+
+@media (min-width: 768px) {
+	.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left: solid 2px white; }
+  .cover #p{
+font-size: x-large;
+   } 
+}
+@media (max-width: 767px) {
+	.footer-bs .footer-brand, .footer-bs .footer-nav { border-bottom: solid 2px white; }
+  .cover #p{
+font-size: medium;
+   } 
+}
+z
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+
+
+
+ .modal .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.modal .col-20 {
+  -ms-flex: 20%; /* IE10 */
+  flex: 20%;
+}
+
+.modal .col-40 {
+  -ms-flex: 40%; /* IE10 */
+  flex: 40%;
+}
+.modal .col-60 {
+  -ms-flex: 60%; /* IE10 */
+  flex: 60%;
+}
+
+.modal .col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 100%;
+  width:50%;
+  float:center;
+  margin-left:25%;
+}
+
+.modal .col-20,
+.modal .col-40,
+.modal .col-75 ,.modal .col-60{
+  padding: 0 16px;
+}
+
+.modal .container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+.modal input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.modal input[type=date] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.modal img {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 3px;
+}
+.modal select {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+ 
+}
+.modal select option.sel{
+color:gray;
+}
+.modal #city option{
+  width: 100%;
+  font-size:15px;
+  padding: 20px;
+  border: 1px solid black;
+
+  color:black;
+}
+.modal label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.modal .icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.modal .btn {
+  background-color:darkorange ;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.modal .btn:hover {
+  background-color: gray;
+}
+
+.modal a {
+  color: #2196F3;
+}
+
+.modal hr {
+  border: 1px solid lightgrey;
+}
+
+.modal span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 500px) {
+.modal .col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 100%;
+  width:80%;
+  float:center;
+  margin-left:10%;
+}
+}
+
+.modal1 .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.modal1 .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+
+
+.modal1 .container {
+  padding: 16px;
+}
+
+.modal1 span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal1 .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.modal1 .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.modal1 .close:hover,
+.modal1 .close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  .modal1 span.psw {
+     display: block;
+     float: none;
+  }
+  .modal1 .cancelbtn {
+     width: 100%;
+  }
+}
+.modal1 input[type=text],.modal1 input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+    </style>
+  </head>
+  <body>
+    <!--navbar-->
+{% include 'home/navarbar.html' %}
+<style>
+
+.table-responsive {
+    margin: 30px 0;
+}
+.table-wrapper {
+	background: #fff;
+	padding: 20px 25px;
+	border-radius: 3px;
+	min-width: 1000px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    font-family:cursive;
+    font-size:medium;
+
+}
+.table-title {        
+	padding-bottom: 15px;
+	background: #73461F;
+	color: #fff;
+	padding: 16px 30px;
+	min-width: 100%;
+	margin: -20px -25px 10px;
+	border-radius: 3px 3px 0 0;
+}
+.table-title h2 {
+	margin: 5px 0 0;
+	font-size: 20px;
+}
+
+
+table.table tr th, table.table tr td {
+	border-color: #e9e9e9;
+	padding: 12px 15px;
+	vertical-align: middle;
+}
+table.table tr th:first-child {
+	width: 60px;
+}
+table.table tr th:last-child {
+	width: 100px;
+}
+table.table-striped tbody tr:nth-of-type(odd) {
+	background-color: #ffe066;
+}
+table.table-striped.table-hover tbody tr:hover {
+	background: #f5f5f5;
+}
+	
+table.table td:last-child i {
+	opacity: 0.9;
+	font-size: 22px;
+	margin: 0 5px;
+}
+table.table td a {
+	font-weight: bold;
+	color: #566787;
+	display: inline-block;
+	text-decoration: none;
+	outline: none !important;
+}
+table.table td a:hover {
+	color: #2196F3;
+}
+#git .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin-left:10%;
+  float:left;
+  text-align: center;
+  font-family: arial;
+}
+#git .title {
+  color: grey;
+  font-size: 18px;
+}
+
+
+
+#git a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+
+#git .w3-twothird{
+ margin-left:-7%;
+}
+</style>
+
+<div class="w3-content w3-margin-top" id="git" style="max-width:2000px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+
+
+<div class="card" style="margin-bottom:82px;">
+ {% for form in forms %}
+  <img src=" {{ form.image.url }} " alt="" style="width:100%">
+  
+  <h1>{{ form.chef.prenom}} {{ form.chef.nom}}</h1>
+  <p class="title">Contact : {{form.chef.contact_prof}}</p>
+  
+  <p>Chef Departement </p>
+  <div style="margin: 24px 0;">
+
+  </div>
+  	{% endfor %}
+</div>
+      </div><br>
+
+    <!-- End Left Column -->
+    </div>
+
+    <!-- Right Column -->
+<div class="w3-twothird">
+    
+    
+
+<nav class="navbar navbar-expand-sm "  style="background-color:#F5DD8C">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse " id="navbarNav" >
+    <ul class="navbar-nav ">
+      <li class="nav-item active">
+          <button class="btn  btn-lg" style="background-color:#73461F;margin-right:10%" type="submit" ><a  href="{% url 'civilen' %}" style="text-decoration:none;color:white;font-family:cursive;font-size:large; ">Enseignement</a></button>
+      </li>
+	  <li style="margin-right:3%">
+	  </li>
+      <li class="nav-item">
+		  <button class="btn  btn-lg" style="background-color:#73461F;margin-right:10%" type="submit" ><a  href="{% url 'civilmt' %}" style="text-decoration:none;color:white;font-family:cursive;font-size:large; ">Matiere</a></button>
+      </li>
+	  	  <li style="margin-right:3%">
+	  </li>
+      <li class="nav-item">
+		  <button class="btn  btn-lg" style="background-color:#73461F;margin-right:10%" type="submit" ><a  href="{% url 'civildic1' %}" style="text-decoration:none;color:white;font-family:cursive;font-size:large; ">DIC1</a></button>
+      </li>
+	  <li style="margin-right:3%">
+	  </li>
+	        <li class="nav-item">
+		  <button class="btn  btn-lg" style="background-color:#73461F;margin-right:10%" type="submit" ><a  href="{% url 'civildic2' %}" style="text-decoration:none;color:white;font-family:cursive;font-size:large; ">DIC2</a></button>
+      </li>
+	  <li style="margin-right:3%">
+	  </li>
+	        <li class="nav-item">
+		  <button class="btn  btn-lg" style="background-color:#73461F;margin-right:10%" type="submit" ><a  href="{% url 'civildic3' %}" style="text-decoration:none;color:white;font-family:cursive;font-size:large; ">DIC3</a></button>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+      {% block content %}
+
+      {% endblock%}
+       
+</div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+
+      <!-- image -->
+
+
+    <!-- Begin Footer -->
+<!-- Begin Footer -->
+{% include 'home/footer.html' %}
+
+
+<!-- End Footer -->
+<!-- End Footer -->
+<script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  var modal1 = document.getElementById('id02');
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  window.onclick = function(event) {
+    if (event.target == modal1) {
+      modal.style.display = "none";
+    }
+  }
+
+
+
+
+
+  </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
